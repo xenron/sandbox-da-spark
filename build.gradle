@@ -4,6 +4,7 @@ apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'idea'
 apply plugin: 'jetty'
+apply plugin: 'jettyEclipse'
 
 // JDK 8
 sourceCompatibility = 1.8
@@ -11,28 +12,53 @@ targetCompatibility = 1.8
 
 compileJava.options.encoding = 'UTF-8'
 compileScala.options.encoding = 'UTF-8'
+compileScala.scalaCompileOptions.useAnt = false
+
+tasks.withType(Compile) {
+    options.encoding = 'UTF-8'
+}
+tasks.withType(JavaCompile) { 
+    sourceCompatibility = "1.8"
+    targetCompatibility = "1.8" 
+}
+
+ext {
+  scalaVersion = "2.11"
+  // scalaLibVersion = "2.11.8"
+  scalaFullVersion= "${scalaVersion}.8"
+  scalatraVersion = "2.4.0"
+
+  // Extra options for the compiler:
+  // -feature: Give detailed warnings about language feature use (rather than just 'there were 4 warnings')
+  // -language:implicitConversions: Allow the use of implicit conversions without warning or library import
+  // -language:reflectiveCalls: Allow the automatic use of reflection to access fields without warning or library import
+  // scalaOptions = "-feature -language:implicitConversions -language:reflectiveCalls"
+
+  jettyVersion = "9.3.9.v20160517"
+  // jettyVersion = "8.1.8.v20121106"
+}
 
 sourceSets {
     main {
         java {
-            srcDir 'src/main/java'
+            srcDir ['src/main/java']
         }
         scala {
-            srcDir 'src/main/scala'
+            srcDir ['src/main/scala']
         }
         resources {
-            srcDir 'src/main/resources'
+            srcDir ['src/main/resources']
         }
     }
     test {
         java {
-            srcDir 'src/test/java'
+            srcDir ['src/test/java']
         }
         scala {
-            srcDir 'src/test/scala'
+            srcDir ['src/test/scala']
         }
         resources {
-            srcDir 'src/test/resources'
+            srcDir ['src/test/resources']
         }
     }
 }
@@ -47,15 +73,24 @@ dependencies {
     compile 'ch.qos.logback:logback-classic:1.1.3'
     compile 'org.slf4j:slf4j-api:1.7.19'
     compile 'org.slf4j:slf4j-log4j12:1.7.19'
+    compile 'org.apache.logging.log4j:log4j-core:2.5'
 
     compile 'org.springframework:spring-webmvc:4.2.6.RELEASE'
+
+    // scala
+    compile "org.scala-lang:scala-library:$scalaFullVersion"
+    compile "org.scalatra:scalatra_$scalaVersion:$scalatraVersion"
+    compile "org.scalatra:scalatra-jetty_$scalaVersion:$scalatraVersion"
+    compile "org.scalatra:scalatra-json_$scalaVersion:$scalatraVersion"
+    compile "org.json4s:json4s-jackson_$scalaVersion:3.3.0"
+
     compile 'javax.servlet:jstl:1.2'
-    compile 'org.apache.logging.log4j:log4j-core:2.5'
     compile 'joda-time:joda-time:2.9.3'
     compile 'gov.nist.math:jama:1.0.3'
     compile 'org.hamcrest:hamcrest-all:1.1'
     compile 'junit:junit:4.8.1'
     compile 'org.mockito:mockito-all:1.8.5'
+
     compile 'org.apache.hadoop:hadoop-common:2.7.2'
     compile 'org.apache.hadoop:hadoop-core:1.2.1'
     compile 'com.typesafe.akka:akka-actor_2.11:2.4.4'
