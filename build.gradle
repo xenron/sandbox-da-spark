@@ -31,7 +31,7 @@ dependencies {
     compile 'org.apache.hadoop:hadoop-core:1.2.1'
     compile 'com.typesafe.akka:akka-actor_2.11:2.4.4'
     compile 'com.typesafe.akka:akka-remote_2.11:2.4.4'
-    compile 'org.neuroph:neuroph-core:2.8'
+    // compile 'org.neuroph:neuroph-core:2.8'
 }
 
 // Embeded Jetty for testing

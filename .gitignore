@@ -26,3 +26,5 @@ target
 *.ipr
 *.iws
 out
+project/project
+project/target
