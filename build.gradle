@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'scala'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'idea'
@@ -7,6 +8,34 @@ apply plugin: 'jetty'
 // JDK 8
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+compileJava.options.encoding = 'UTF-8'
+compileScala.options.encoding = 'UTF-8'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        scala {
+            srcDir 'src/main/scala'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test/java'
+        }
+        scala {
+            srcDir 'src/test/scala'
+        }
+        resources {
+            srcDir 'src/test/resources'
+        }
+    }
+}
 
 repositories {
     mavenLocal()
@@ -19,7 +48,7 @@ dependencies {
     compile 'org.slf4j:slf4j-api:1.7.19'
     compile 'org.slf4j:slf4j-log4j12:1.7.19'
 
-    compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
+    compile 'org.springframework:spring-webmvc:4.2.6.RELEASE'
     compile 'javax.servlet:jstl:1.2'
     compile 'org.apache.logging.log4j:log4j-core:2.5'
     compile 'joda-time:joda-time:2.9.3'
@@ -31,7 +60,6 @@ dependencies {
     compile 'org.apache.hadoop:hadoop-core:1.2.1'
     compile 'com.typesafe.akka:akka-actor_2.11:2.4.4'
     compile 'com.typesafe.akka:akka-remote_2.11:2.4.4'
-    // compile 'org.neuroph:neuroph-core:2.8'
 }
 
 // Embeded Jetty for testing
@@ -51,6 +79,39 @@ eclipse {
     component {
       //define context path, default to project folder name
       contextPath = 'spring4'
+    }
+  }
+}
+
+//For IDEA IDE only
+idea {
+  /*
+  module {
+    inheritOutputDirs = false
+    outputDir = file('muchBetterOutputDir')
+    testOutputDir = file('muchBetterTestOutputDir')
+  }
+  */
+  /*
+  module.iml.withXml {
+    def attsResource = it.asNode().component.content.sourceFolder.find { it.@url == 'file://$MODULE_DIR$/src/main/resources' }.attributes()
+    attsResource.remove('isTestSource')
+    attsResource.put('type', 'java-resource')
+    def attsTestResource = it.asNode().component.content.sourceFolder.find { it.@url == 'file://$MODULE_DIR$/src/test/resources' }.attributes()
+    attsTestResource.remove('isTestSource')
+    attsTestResource.put('type', 'java-test-resource')
+  }
+  */
+  module.iml.withXml {
+    def node = it.asNode()
+    def content = node.component.find { it.'@name' == 'NewModuleRootManager' }.content[0]
+    content.sourceFolder.each { sourceFolder ->
+      if(sourceFolder.@url?.endsWith('/resources')) {
+        sourceFolder.attributes().with {
+        boolean isTestSource = (remove('isTestSource') == 'true')
+        put('type', isTestSource ? 'java-test-resource' : 'java-resource')
+        }
+      }
     }
   }
 }
