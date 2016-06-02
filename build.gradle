@@ -95,8 +95,9 @@ dependencies {
 
     compile 'org.apache.hadoop:hadoop-common:2.7.2'
     compile 'org.apache.hadoop:hadoop-core:1.2.1'
-    compile 'com.typesafe.akka:akka-actor_2.11:2.4.4'
-    compile 'com.typesafe.akka:akka-remote_2.11:2.4.4'
+    compile 'com.typesafe.akka:akka-actor_2.11:2.4.6'
+    compile 'com.typesafe.akka:akka-remote_2.11:2.4.6'
+    compile 'com.typesafe.akka:akka-cluster_2.11:2.4.6'
 }
 
 // Embeded Jetty for testing
