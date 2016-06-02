@@ -4,7 +4,7 @@ apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'idea'
 apply plugin: 'jetty'
-apply plugin: 'jettyEclipse'
+// apply plugin: 'jettyEclipse'
 
 // JDK 8
 sourceCompatibility = 1.8
@@ -14,9 +14,11 @@ compileJava.options.encoding = 'UTF-8'
 compileScala.options.encoding = 'UTF-8'
 compileScala.scalaCompileOptions.useAnt = false
 
+/*
 tasks.withType(Compile) {
     options.encoding = 'UTF-8'
 }
+*/
 tasks.withType(JavaCompile) { 
     sourceCompatibility = "1.8"
     targetCompatibility = "1.8" 
@@ -41,24 +43,24 @@ ext {
 sourceSets {
     main {
         java {
-            srcDir ['src/main/java']
+            srcDir 'src/main/java'
         }
         scala {
-            srcDir ['src/main/scala']
+            srcDir 'src/main/scala'
         }
         resources {
-            srcDir ['src/main/resources']
+            srcDir 'src/main/resources'
         }
     }
     test {
         java {
-            srcDir ['src/test/java']
+            srcDir 'src/test/java'
         }
         scala {
-            srcDir ['src/test/scala']
+            srcDir 'src/test/scala'
         }
         resources {
-            srcDir ['src/test/resources']
+            srcDir 'src/test/resources'
         }
     }
 }
