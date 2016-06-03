@@ -123,6 +123,15 @@ eclipse {
 
 //For IDEA IDE only
 idea {
+  project {
+    jdkName = '1.8'
+    languageLevel = '1.8'
+    ipr {
+        withXml { provider ->
+            provider.node.component.find { it.@name == 'VcsDirectoryMappings' }.mapping.@vcs = 'Git'
+        }
+    }
+  }
   /*
   module {
     inheritOutputDirs = false
