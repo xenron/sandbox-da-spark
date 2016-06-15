@@ -1,0 +1,50 @@
+####################################
+# HBase Config
+####################################
+gremlin.hadoop.graphInputFormat=com.thinkaurelius.titan.hadoop.formats.hbase.HBaseInputFormat
+gremlin.hadoop.graphOutputFormat=org.apache.tinkerpop.gremlin.hadoop.structure.io.gryo.GryoOutputFormat
+gremlin.hadoop.memoryOutputFormat=org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat
+gremlin.hadoop.deriveMemory=false
+gremlin.hadoop.jarsInDistributedCache=true
+gremlin.hadoop.inputLocation=none
+gremlin.hadoop.outputLocation=output
+####################################
+# Storage details
+####################################
+storage.backend=hbase
+storage.hostname=hc2r1m2
+storage.port=2181
+#storage.hbase.table=titan
+#storage.hbase.ext.zookeeper.znode.parent=/hbase
+####################################
+# blueprints
+#######################################
+gremlin.graph=org.apache.tinkerpop.gremlin.hadoop.structure.HadoopGraph
+#gremlin.graph=com.thinkaurelius.titan.core.TitanFactory
+####################################
+# SparkGraphComputer Configuration 
+####################################
+spark.master=spark://hc2nn.semtech-solutions.co.nz:6077
+spark.executor.memory=400M
+spark.serializer=org.apache.spark.serializer.KryoSerializer
+cassandra.input.partitioner.class=org.apache.cassandra.dht.Murmur3Partitioner
+#spark.akka.heartbeat.interval=100
+#spark.storage.memoryFraction=0.4
+###################################
+# cache
+#####################################
+#cache.db-cache = true
+#cache.db-cache-clean-wait = 20
+#cache.db-cache-time = 180000
+#cache.db-cache-size = 0.25
+####################################
+# index
+######################################
+index.search.backend=elasticsearch
+index.search.client-only=false
+index.search.local-mode=true
+index.search.directory=/tmp/searchindex
+#
+#index.search.hostname=hc2r1m2
+#index.search.elasticsearch.client-only=true
+#index.search.sniff=false

@@ -1,0 +1,356 @@
+
+=========================================================================
+======================== chap 2 
+=========================================================================
+
+================== mine =====
+
+[hadoop@hc2nn chapter2]$ ls -l ANN
+total 20
+-rw-rw-r-- 1 hadoop hadoop  629 Aug 13 09:36 ann.sbt
+-rw-rw-r-- 1 hadoop hadoop  259 Aug 13 09:36 run_ann.bash
+-rw-rw-r-- 1 hadoop hadoop 3505 Aug 13 09:42 test_ann1.scala
+-rw-rw-r-- 1 hadoop hadoop 4660 Aug 13 09:42 test_ann2.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 2]$ ls -l ANN
+total 20
+-rw-rw-r-- 1 hadoop hadoop  629 Aug 13 09:36 ann.sbt
+-rw-rw-r-- 1 hadoop hadoop  259 Aug 13 09:36 run_ann.bash
+-rw-rw-r-- 1 hadoop hadoop 3505 Aug 13 09:42 test_ann1.scala
+-rw-rw-r-- 1 hadoop hadoop 4660 Aug 13 09:42 test_ann2.scala
+
+================== mine =====
+
+[hadoop@hc2nn chapter2]$ ls -lrt data
+total 48
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 plus_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 plus.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 open_triangle_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 open_triangle.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 open_square_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 open_square.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 lines_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 lines.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 close_triangle_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 close_triangle.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 close_square_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 close_square.img
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 2]$ ls -lrt data
+total 48
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 plus_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 plus.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 open_triangle_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 open_triangle.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 open_square_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 open_square.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 lines_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 lines.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 close_triangle_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 close_triangle.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 close_square_test.img
+-rw-rw-r-- 1 hadoop hadoop 800 Aug 13 09:44 close_square.img
+
+================== mine =====
+
+[hadoop@hc2nn chapter2]$ ls -lrt "K Means"
+total 20
+-rw-rw-r-- 1 hadoop hadoop 2519 Aug 13 09:34 convTestData.pl
+-rw-rw-r-- 1 hadoop hadoop  419 Aug 13 09:34 kmeans.sbt
+-rw-rw-r-- 1 hadoop hadoop 4199 Aug 13 09:35 convert.scala
+-rw-rw-r-- 1 hadoop hadoop 2626 Aug 13 09:35 kmeans1.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 2]$ ls -lrt "K Means"
+total 20
+-rw-rw-r-- 1 hadoop hadoop 2519 Aug 13 09:34 convTestData.pl
+-rw-rw-r-- 1 hadoop hadoop  419 Aug 13 09:34 kmeans.sbt
+-rw-rw-r-- 1 hadoop hadoop 4199 Aug 13 09:35 convert.scala
+-rw-rw-r-- 1 hadoop hadoop 2626 Aug 13 09:35 kmeans1.scala
+
+================== mine =====
+
+[hadoop@hc2nn chapter2]$ ls -lrt "naive bayes"
+total 20
+-rw-rw-r-- 1 hadoop hadoop  422 Aug 13 09:33 bayes.sbt
+-rw-rw-r-- 1 hadoop hadoop 2519 Aug 13 09:34 convTestData.pl
+-rw-rw-r-- 1 hadoop hadoop 2199 Aug 13 09:34 bayes1.scala
+-rw-rw-r-- 1 hadoop hadoop 4199 Aug 13 09:34 convert.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 2]$ ls -lrt "naive bayes"
+total 20
+-rw-rw-r-- 1 hadoop hadoop  422 Aug 13 09:33 bayes.sbt
+-rw-rw-r-- 1 hadoop hadoop 2519 Aug 13 09:34 convTestData.pl
+-rw-rw-r-- 1 hadoop hadoop 2199 Aug 13 09:34 bayes1.scala
+-rw-rw-r-- 1 hadoop hadoop 4199 Aug 13 09:34 convert.scala
+
+=========================================================================
+======================== chap 3 
+=========================================================================
+
+================== mine =====
+
+[hadoop@hc2nn chapter3]$ ls -lrt
+total 64
+-rw-rw-r-- 1 hadoop hadoop  894 Aug 13 09:51 agent1.flume.cfg
+-rw-rw-r-- 1 hadoop hadoop  840 Aug 13 09:51 agent1.flume2.cfg
+-rw-rw-r-- 1 hadoop hadoop  178 Aug 13 09:51 flume.bash
+-rw-rw-r-- 1 hadoop hadoop  357 Aug 13 09:51 kafka.bash
+-rw-rw-r-- 1 hadoop hadoop  709 Aug 13 09:51 kafka_list.bash
+-rw-rw-r-- 1 hadoop hadoop 2962 Aug 13 09:52 rss.perl
+-rw-rw-r-- 1 hadoop hadoop  504 Aug 13 09:52 run_stream_bash.spark_1.3.1
+-rw-rw-r-- 1 hadoop hadoop  484 Aug 13 09:52 stream.sbt_1.3
+-rw-rw-r-- 1 hadoop hadoop  634 Aug 13 09:52 stream_kafka.sbt_1.3
+-rw-rw-r-- 1 hadoop hadoop 2210 Aug 13 09:53 stream6.scala
+-rw-rw-r-- 1 hadoop hadoop 1974 Aug 13 09:53 stream5.scala
+-rw-rw-r-- 1 hadoop hadoop 1393 Aug 13 09:53 stream4.scala
+-rw-rw-r-- 1 hadoop hadoop 1397 Aug 13 09:53 stream3.scala
+-rw-rw-r-- 1 hadoop hadoop 1441 Aug 13 09:53 stream2.scala
+-rw-rw-r-- 1 hadoop hadoop 1977 Aug 13 09:53 stream1.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 3]$ ls -lrt
+total 60
+-rw-rw-r-- 1 hadoop hadoop  894 Aug 13 09:51 agent1.flume.cfg
+-rw-rw-r-- 1 hadoop hadoop  840 Aug 13 09:51 agent1.flume2.cfg
+-rw-rw-r-- 1 hadoop hadoop  178 Aug 13 09:51 flume.bash
+-rw-rw-r-- 1 hadoop hadoop  357 Aug 13 09:51 kafka.bash
+-rw-rw-r-- 1 hadoop hadoop  709 Aug 13 09:51 kafka_list.bash
+-rw-rw-r-- 1 hadoop hadoop 2962 Aug 13 09:52 rss.perl
+-rw-rw-r-- 1 hadoop hadoop  504 Aug 13 09:52 run_stream_bash.spark_1.3.1
+-rw-rw-r-- 1 hadoop hadoop  484 Aug 13 09:52 stream.sbt_1.3
+-rw-rw-r-- 1 hadoop hadoop  634 Aug 13 09:52 stream_kafka.sbt_1.3
+-rw-rw-r-- 1 hadoop hadoop 2210 Aug 13 09:53 stream6.scala
+-rw-rw-r-- 1 hadoop hadoop 1974 Aug 13 09:53 stream5.scala
+-rw-rw-r-- 1 hadoop hadoop 1393 Aug 13 09:53 stream4.scala
+-rw-rw-r-- 1 hadoop hadoop 1397 Aug 13 09:53 stream3.scala
+-rw-rw-r-- 1 hadoop hadoop 1441 Aug 13 09:53 stream2.scala
+-rw-rw-r-- 1 hadoop hadoop 1977 Aug 13 09:53 stream1.scala
+
+=========================================================================
+======================== chap 4 
+=========================================================================
+
+================== mine =====
+
+[hadoop@hc2nn chapter4]$ ls -lrt hive
+total 16
+-rw-rw-r-- 1 hadoop hadoop  495 Aug 13 10:04 hive.sbt_1.3
+-rw-rw-r-- 1 hadoop hadoop  364 Aug 13 10:04 hive_bash.spark_1.3.1
+-rw-rw-r-- 1 hadoop hadoop 4448 Aug 13 10:05 hive_ex1.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 4]$ ls -lrt hive
+total 16
+-rw-rw-r-- 1 hadoop hadoop  495 Aug 13 10:04 hive.sbt_1.3
+-rw-rw-r-- 1 hadoop hadoop  364 Aug 13 10:04 hive_bash.spark_1.3.1
+-rw-rw-r-- 1 hadoop hadoop 4448 Aug 13 10:05 hive_ex1.scala
+
+================== mine =====
+
+[hadoop@hc2nn chapter4]$ ls -lrt sql
+total 36
+-rw-rw-r-- 1 hadoop hadoop  487 Aug 13 09:59 sql.sbt_1.3
+-rw-rw-r-- 1 hadoop hadoop  350 Aug 13 12:31 sql_bash.spark_1.3.1
+-rw-rw-r-- 1 hadoop hadoop 1511 Aug 13 13:22 sql1.scala
+-rw-rw-r-- 1 hadoop hadoop 1484 Aug 13 13:25 sql2.scala
+-rw-rw-r-- 1 hadoop hadoop 7004 Aug 13 13:27 sql5.scala
+-rw-rw-r-- 1 hadoop hadoop 4390 Aug 13 13:27 sql4.scala
+-rw-rw-r-- 1 hadoop hadoop 1866 Aug 13 13:27 sql3.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 4]$  ls -lrt sql
+total 36
+-rw-rw-r-- 1 hadoop hadoop  487 Aug 13 09:59 sql.sbt_1.3
+-rw-rw-r-- 1 hadoop hadoop  350 Aug 13 12:31 sql_bash.spark_1.3.1
+-rw-rw-r-- 1 hadoop hadoop 1511 Aug 13 13:22 sql1.scala
+-rw-rw-r-- 1 hadoop hadoop 1484 Aug 13 13:25 sql2.scala
+-rw-rw-r-- 1 hadoop hadoop 7004 Aug 13 13:27 sql5.scala
+-rw-rw-r-- 1 hadoop hadoop 4390 Aug 13 13:27 sql4.scala
+-rw-rw-r-- 1 hadoop hadoop 1866 Aug 13 13:27 sql3.scala
+
+=========================================================================
+======================== chap 5 
+=========================================================================
+
+================== mine =====
+
+[hadoop@hc2nn chapter5]$ ls -lrt graphx
+total 36
+-rw-rw-r-- 1 hadoop hadoop  419 Aug 13 10:07 graph.sbt
+-rw-rw-r-- 1 hadoop hadoop  236 Aug 13 10:07 exec_spark.bash
+-rw-rw-r-- 1 hadoop hadoop  129 Aug 13 10:07 graph1_edges.csv
+-rw-rw-r-- 1 hadoop hadoop   59 Aug 13 10:07 graph1_vertex.csv
+-rw-rw-r-- 1 hadoop hadoop 1666 Aug 14 13:27 graph2.scala
+-rw-rw-r-- 1 hadoop hadoop 1474 Aug 14 13:27 graph1.scala
+-rw-rw-r-- 1 hadoop hadoop 1819 Aug 14 13:27 graph3.scala
+-rw-rw-r-- 1 hadoop hadoop 2090 Aug 14 13:27 graph5.scala
+-rw-rw-r-- 1 hadoop hadoop 1506 Aug 14 13:27 graph4.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 5]$ ls -lrt graphx
+total 36
+-rw-rw-r-- 1 hadoop hadoop  419 Aug 13 10:07 graph.sbt
+-rw-rw-r-- 1 hadoop hadoop  236 Aug 13 10:07 exec_spark.bash
+-rw-rw-r-- 1 hadoop hadoop  129 Aug 13 10:07 graph1_edges.csv
+-rw-rw-r-- 1 hadoop hadoop   59 Aug 13 10:07 graph1_vertex.csv
+-rw-rw-r-- 1 hadoop hadoop 1666 Aug 14 13:27 graph2.scala
+-rw-rw-r-- 1 hadoop hadoop 1474 Aug 14 13:27 graph1.scala
+-rw-rw-r-- 1 hadoop hadoop 1819 Aug 14 13:27 graph3.scala
+-rw-rw-r-- 1 hadoop hadoop 2090 Aug 14 13:27 graph5.scala
+-rw-rw-r-- 1 hadoop hadoop 1506 Aug 14 13:27 graph4.scala
+
+=========================================================================
+======================== chap 6 
+=========================================================================
+
+================== mine =====
+
+[hadoop@hc2nn chapter6]$ ls -lrt titan
+total 52
+-rw-rw-r-- 1 hadoop hadoop 1903 Aug 13 10:46 hbase.prop
+-rw-rw-r-- 1 hadoop hadoop  106 Aug 13 10:46 hbase_drop.bash
+-rw-rw-r-- 1 hadoop hadoop 1939 Aug 13 10:46 hbase_create.bash
+-rw-rw-r-- 1 hadoop hadoop  507 Aug 13 10:46 hbase_list.bash
+-rw-rw-r-- 1 hadoop hadoop 2207 Aug 13 10:48 cassandra_create.bash
+-rw-rw-r-- 1 hadoop hadoop  651 Aug 13 10:48 cassandra_list.bash
+-rw-rw-r-- 1 hadoop hadoop  149 Aug 13 10:48 cassandra_drop.bash
+-rw-rw-r-- 1 hadoop hadoop  478 Aug 13 11:21 cassandra_spark1.bash
+-rw-rw-r-- 1 hadoop hadoop  479 Aug 13 11:21 cassandra_spark2.bash
+-rw-rw-r-- 1 hadoop hadoop  383 Aug 13 11:21 cass_grem1.groovy
+-rw-rw-r-- 1 hadoop hadoop  585 Aug 13 11:21 cass_grem2.groovy
+-rw-rw-r-- 1 hadoop hadoop 1706 Aug 13 11:23 cassandra.properties
+-rw-rw-r-- 1 hadoop hadoop 1162 Aug 13 11:28 hadoop-gryo.properties
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 6]$ ls -lrt titan
+total 52
+-rw-rw-r-- 1 hadoop hadoop 1903 Aug 13 10:46 hbase.prop
+-rw-rw-r-- 1 hadoop hadoop  106 Aug 13 10:46 hbase_drop.bash
+-rw-rw-r-- 1 hadoop hadoop 1939 Aug 13 10:46 hbase_create.bash
+-rw-rw-r-- 1 hadoop hadoop  507 Aug 13 10:46 hbase_list.bash
+-rw-rw-r-- 1 hadoop hadoop 2207 Aug 13 10:48 cassandra_create.bash
+-rw-rw-r-- 1 hadoop hadoop  651 Aug 13 10:48 cassandra_list.bash
+-rw-rw-r-- 1 hadoop hadoop  149 Aug 13 10:48 cassandra_drop.bash
+-rw-rw-r-- 1 hadoop hadoop  478 Aug 13 11:21 cassandra_spark1.bash
+-rw-rw-r-- 1 hadoop hadoop  479 Aug 13 11:21 cassandra_spark2.bash
+-rw-rw-r-- 1 hadoop hadoop  383 Aug 13 11:21 cass_grem1.groovy
+-rw-rw-r-- 1 hadoop hadoop  585 Aug 13 11:21 cass_grem2.groovy
+-rw-rw-r-- 1 hadoop hadoop 1706 Aug 13 11:23 cassandra.properties
+-rw-rw-r-- 1 hadoop hadoop 1162 Aug 13 11:28 hadoop-gryo.properties
+
+================== mine =====
+
+[hadoop@hc2nn chapter6]$ ls -lrt titan_cass
+total 12
+-rw-rw-r-- 1 hadoop hadoop 1073 Aug 13 10:35 titan.sbt
+-rw-rw-r-- 1 hadoop hadoop  894 Aug 13 10:35 run_titan.bash.cass
+-rw-rw-r-- 1 hadoop hadoop 1170 Aug 13 10:36 spark3_cass.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 6]$ ls -lrt titan_cass
+total 12
+-rw-rw-r-- 1 hadoop hadoop 1073 Aug 13 10:35 titan.sbt
+-rw-rw-r-- 1 hadoop hadoop  894 Aug 13 10:35 run_titan.bash.cass
+-rw-rw-r-- 1 hadoop hadoop 1170 Aug 13 10:36 spark3_cass.scala
+
+================== mine =====
+
+[hadoop@hc2nn chapter6]$ ls -lrt titan_hbase
+total 12
+-rw-rw-r-- 1 hadoop hadoop  653 Aug 13 10:33 titan.sbt
+-rw-rw-r-- 1 hadoop hadoop  627 Aug 13 10:33 run_titan.bash.hbase
+-rw-rw-r-- 1 hadoop hadoop 1415 Aug 13 10:34 spark3_hbase2.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 6]$  ls -lrt titan_hbase
+total 12
+-rw-rw-r-- 1 hadoop hadoop  653 Aug 13 10:33 titan.sbt
+-rw-rw-r-- 1 hadoop hadoop  627 Aug 13 10:33 run_titan.bash.hbase
+-rw-rw-r-- 1 hadoop hadoop 1415 Aug 13 10:34 spark3_hbase2.scala
+
+=========================================================================
+======================== chap 7 
+=========================================================================
+
+================== mine =====
+
+[hadoop@hc2nn chapter7]$ ls -lrt
+total 60
+-rw-rw-r-- 1 hadoop hadoop  374 Aug 13 10:15 chk_csv.bash
+-rw-rw-r-- 1 hadoop hadoop  249 Aug 13 10:15 list_elem.bash
+-rw-rw-r-- 1 hadoop hadoop 1484 Aug 13 10:15 h2o.sbt.spark_1.2_cdh5.3
+-rw-rw-r-- 1 hadoop hadoop  934 Aug 13 10:15 run_h2o.bash.spark_1.2_cdh5.3
+-rw-rw-r-- 1 hadoop hadoop 8423 Aug 13 10:16 h2o_spark_ex3.scala
+-rw-rw-r-- 1 hadoop hadoop 1184 Aug 13 10:16 h2o_spark_ex2.scala
+-rw-rw-r-- 1 hadoop hadoop 6648 Aug 13 10:16 h2o_spark_ex1.scala
+-rw-rw-r-- 1 hadoop hadoop 5606 Aug 13 10:16 h2o_spark_dl.scala
+-rw-rw-r-- 1 hadoop hadoop 7228 Aug 13 10:16 h2o_spark_dl2.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 7]$ ls -lrt
+total 56
+-rw-rw-r-- 1 hadoop hadoop  374 Aug 13 10:15 chk_csv.bash
+-rw-rw-r-- 1 hadoop hadoop  249 Aug 13 10:15 list_elem.bash
+-rw-rw-r-- 1 hadoop hadoop 1484 Aug 13 10:15 h2o.sbt.spark_1.2_cdh5.3
+-rw-rw-r-- 1 hadoop hadoop  934 Aug 13 10:15 run_h2o.bash.spark_1.2_cdh5.3
+-rw-rw-r-- 1 hadoop hadoop 8423 Aug 13 10:16 h2o_spark_ex3.scala
+-rw-rw-r-- 1 hadoop hadoop 1184 Aug 13 10:16 h2o_spark_ex2.scala
+-rw-rw-r-- 1 hadoop hadoop 6648 Aug 13 10:16 h2o_spark_ex1.scala
+-rw-rw-r-- 1 hadoop hadoop 5606 Aug 13 10:16 h2o_spark_dl.scala
+-rw-rw-r-- 1 hadoop hadoop 7228 Aug 13 10:16 h2o_spark_dl2.scala
+
+=========================================================================
+======================== chap 8 
+=========================================================================
+
+================== mine =====
+
+[hadoop@hc2nn chapter8]$ ls -lrt
+total 16
+-rw-rw-r-- 1 hadoop hadoop  702 Aug 15 12:45 databricks.sbt
+-rw-rw-r-- 1 hadoop hadoop  725 Aug 15 12:45 run_db.bash
+-rw-rw-r-- 1 hadoop hadoop 1144 Aug 15 12:45 db_ex1.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 8]$ ls -lrt
+total 12
+-rw-rw-r-- 1 hadoop hadoop  702 Aug 15 12:45 databricks.sbt
+-rw-rw-r-- 1 hadoop hadoop  725 Aug 15 12:45 run_db.bash
+-rw-rw-r-- 1 hadoop hadoop 1144 Aug 15 12:45 db_ex1.scala
+
+=========================================================================
+======================== chap 9
+=========================================================================
+
+================== mine =====
+
+[hadoop@hc2nn chapter9]$ ls -lrt
+total 20
+-rw-rw-r-- 1 hadoop hadoop  503 Aug 15 14:35 run_twitter_bash.spark_1.3.1
+-rw-rw-r-- 1 hadoop hadoop  486 Aug 15 14:35 twitter.sbt_1.3
+-rw-rw-r-- 1 hadoop hadoop 4215 Aug 15 14:36 twitter1.scala
+
+================== packt ======
+
+[hadoop@hc2nn Chapter 9]$ ls -lrt
+total 16
+-rw-rw-r-- 1 hadoop hadoop  503 Aug 15 14:35 run_twitter_bash.spark_1.3.1
+-rw-rw-r-- 1 hadoop hadoop  486 Aug 15 14:35 twitter.sbt_1.3
+-rw-rw-r-- 1 hadoop hadoop 4215 Aug 15 14:36 twitter1.scala

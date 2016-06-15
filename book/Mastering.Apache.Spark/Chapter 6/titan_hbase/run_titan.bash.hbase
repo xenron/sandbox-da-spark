@@ -1,0 +1,26 @@
+#!/bin/bash
+
+SPARK_HOME=/usr/local/spark
+SPARK_BIN=$SPARK_HOME/bin
+SPARK_SBIN=$SPARK_HOME/sbin
+
+JAR_PATH=/home/hadoop/spark/titan_hbase/target/scala-2.10/t-i-t-a-n_2.10-1.0.jar
+CLASS_VAL=$1
+
+CDH_JAR_HOME=/opt/cloudera/parcels/CDH/lib/hbase/
+CONN_HOME=/home/hadoop/spark/SparkOnHBase-cdh5-0.0.2/target/
+
+HBASE_JAR1=$CDH_JAR_HOME/hbase-common-0.98.6-cdh5.3.3.jar
+HBASE_JAR2=$CONN_HOME/SparkHBase.jar
+
+cd $SPARK_BIN
+
+./spark-submit \
+  --jars $HBASE_JAR1 \
+  --jars $HBASE_JAR2 \
+  --class $CLASS_VAL \
+  --master spark://hc2nn.semtech-solutions.co.nz:7077  \
+  --executor-memory 100M \
+  --total-executor-cores 50 \
+  $JAR_PATH
+

@@ -1,0 +1,13 @@
+node {
+    size: 5px;
+    text-mode: hidden;
+    z-index: 1;
+    fill-mode: dyn-plain;
+    fill-color: "#e7298a", "#43a2ca";
+}
+edge {
+    shape: line;
+    fill-color: #fee6ce;
+    arrow-size: 2px, 1px;
+    z-index: 0;
+}

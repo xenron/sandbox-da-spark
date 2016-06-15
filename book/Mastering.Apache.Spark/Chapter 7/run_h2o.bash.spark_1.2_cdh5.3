@@ -1,0 +1,37 @@
+#!/bin/bash
+
+SPARK_HOME=/opt/cloudera/parcels/CDH
+SPARK_LIB=$SPARK_HOME/lib
+SPARK_BIN=$SPARK_HOME/bin
+SPARK_SBIN=$SPARK_HOME/sbin
+SPARK_JAR=$SPARK_LIB/spark-assembly-1.2.0-cdh5.3.3-hadoop2.5.0-cdh5.3.3.jar
+
+# Exception in thread "main" org.apache.spark.SparkException: Found both 
+# spark.executor.extraClassPath and SPARK_CLASSPATH. Use only the former.
+#
+# SPARK_CLASSPATH=$SPARK_LIB:$SPARK_CLASSPATH
+# export SPARK_CLASSPATH
+
+H2O_PATH=/usr/local/h2o/assembly/build/libs
+H2O_JAR=$H2O_PATH/sparkling-water-assembly-0.2.12-95-all.jar
+
+PATH=$SPARK_BIN:$PATH
+PATH=$SPARK_SBIN:$PATH
+export PATH
+
+CLASSPATH=$H2O_JAR:$CLASSPATH
+CLASSPATH=$SPARK_JAR:$CLASSPATH
+export CLASSPATH
+
+cd $SPARK_BIN
+
+./spark-submit \
+  --class $1 \
+  --master spark://hc2nn.semtech-solutions.co.nz:7077  \
+  --executor-memory 85m \
+  --total-executor-cores 50 \
+  --jars $H2O_JAR \
+  /home/hadoop/spark/h2o_spark_1_2/target/scala-2.10/h-2-o_2.10-1.0.jar \
+  50
+
+

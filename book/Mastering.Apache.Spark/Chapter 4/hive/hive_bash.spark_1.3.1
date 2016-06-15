@@ -1,0 +1,19 @@
+#!/bin/bash
+
+SPARK_HOME=/usr/local/spark
+SPARK_BIN=$SPARK_HOME/bin
+SPARK_SBIN=$SPARK_HOME/sbin
+
+JAR_PATH=/home/hadoop/spark/hive/target/scala-2.10/hive-spark-examples_2.10-1.0.jar
+
+cd $SPARK_BIN
+
+./spark-submit \
+  --class $1 \
+  --master spark://hc2nn.semtech-solutions.co.nz:7077  \
+  --executor-memory 500M \
+  --total-executor-cores 50 \
+  $JAR_PATH \
+  100
+
+

@@ -1,0 +1,12 @@
+node {
+    size: 5px;
+    fill-color: #43a2ca;
+    text-mode: hidden;
+    z-index: 1;
+}
+edge {
+    shape: line;
+    fill-color: #fee6ce;
+    arrow-size: 2px, 1px;
+    z-index: 0;
+}
