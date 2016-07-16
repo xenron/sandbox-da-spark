@@ -85,6 +85,8 @@ dependencies {
     compile "org.scalatra:scalatra_$scalaVersion:$scalatraVersion"
     compile "org.scalatra:scalatra-jetty_$scalaVersion:$scalatraVersion"
     compile "org.scalatra:scalatra-json_$scalaVersion:$scalatraVersion"
+    compile group: 'org.scalatest', name: 'scalatest_2.11', version: '3.0.0-M16-SNAP6'
+
     compile "org.json4s:json4s-jackson_$scalaVersion:3.3.0"
 
     compile 'javax.servlet:jstl:1.2'
@@ -94,19 +96,32 @@ dependencies {
     compile 'junit:junit:4.8.1'
     compile 'org.mockito:mockito-all:1.8.5'
 
-    compile 'org.apache.hadoop:hadoop-common:2.7.2'
-    compile 'org.apache.hadoop:hadoop-core:1.2.1'
+    compile group: 'org.bdgenomics.adam', name: 'adam-core_2.11', version: '0.19.0'
+    compile group: 'org.bdgenomics.adam', name: 'adam-distribution_2.11', version: '0.19.0', ext: 'pom'
+    compile group: 'org.bdgenomics.adam', name: 'adam-parent_2.11', version: '0.19.0', ext: 'pom'
+    compile group: 'org.bdgenomics.adam', name: 'adam-apis_2.11', version: '0.19.0'
+    compile group: 'org.bdgenomics.adam', name: 'adam-cli_2.11', version: '0.19.0'
+
     compile 'com.typesafe.akka:akka-actor_2.11:2.4.6'
     compile 'com.typesafe.akka:akka-remote_2.11:2.4.6'
     compile 'com.typesafe.akka:akka-cluster_2.11:2.4.6'
 
+    compile group: 'com.databricks', name: 'spark-avro_2.11', version: '2.0.1'
+    compile group: 'com.databricks', name: 'spark-redshift_2.11', version: '1.0.0'
+    compile group: 'com.databricks', name: 'spark-csv_2.11', version: '1.4.0'
+
+    // hadoop
+    compile 'org.apache.hadoop:hadoop-common:2.7.2'
+    compile 'org.apache.hadoop:hadoop-core:1.2.1'
+
     // spark
-    compile group: 'org.apache.spark', name: 'spark-core_2.11', version: '1.6.1'
-    compile group: 'org.apache.spark', name: 'spark-sql_2.11', version: '1.6.1'
-    compile group: 'org.apache.spark', name: 'spark-streaming_2.11', version: '1.6.1'
-    compile group: 'org.apache.spark', name: 'spark-mllib_2.11', version: '1.6.1'
-    compile group: 'org.apache.spark', name: 'spark-hive_2.11', version: '1.6.1'
-    compile group: 'org.apache.spark', name: 'spark-graphx_2.11', version: '1.6.1'
+    compile group: 'org.apache.spark', name: 'spark-core_2.11', version: '1.6.2'
+    compile group: 'org.apache.spark', name: 'spark-sql_2.11', version: '1.6.2'
+    compile group: 'org.apache.spark', name: 'spark-streaming_2.11', version: '1.6.2'
+    compile group: 'org.apache.spark', name: 'spark-mllib_2.11', version: '1.6.2'
+    compile group: 'org.apache.spark', name: 'spark-hive_2.11', version: '1.6.2'
+    compile group: 'org.apache.spark', name: 'spark-graphx_2.11', version: '1.6.2'
+
 }
 
 // Embeded Jetty for testing
