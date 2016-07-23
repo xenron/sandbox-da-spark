@@ -12,15 +12,18 @@ object LinearRegressionTest {
     // 屏蔽不必要的日志显示终端上
     Logger.getLogger("org.apache.spark").setLevel(Level.ERROR)
     Logger.getLogger("org.eclipse.jetty.server").setLevel(Level.OFF)
+    Logger.getRootLogger.setLevel(Level.WARN)
 
     // 设置运行环境
     //    val conf = new SparkConf().setAppName(this.getClass().getSimpleName().filter(!_.equals('$'))).setMaster("local[4]")
-    val conf = new SparkConf().setAppName("LinearRegressionTest")
-    val sc = new SparkContext(conf)
+//    val conf = new SparkConf().setAppName("LinearRegressionTest")
+//    val sc = new SparkContext(conf)
+    val sc = new SparkContext("local", "TestApp")
 
     // Load and parse the data
     // 如果读入不加1，会产生两个文件，应该是默认生成了两个partition
-    val data = sc.textFile("/tmp/lpsa.data", 1)
+    // val data = sc.textFile("file:///home/xenron/Documents/dataset/lpsa.data", 1)
+    val data = sc.textFile("hdfs://xenron-XPS-8700:9000/input/lpsa.data", 1)
 
     var parsedData = data.map { line =>
       val parts = line.split(',')
@@ -42,7 +45,7 @@ object LinearRegressionTest {
     }
     //print model.weights
     var weifhts=model.weights
-    println("model.weights"+weifhts)
+    println("model.weights "+weifhts)
 
     //save as file
     //    val iString = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date())
