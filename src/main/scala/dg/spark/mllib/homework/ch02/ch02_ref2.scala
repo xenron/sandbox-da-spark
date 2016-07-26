@@ -1,14 +1,12 @@
-package dg.spark.mllib.homework
+package dg.spark.mllib.homework.ch02
 
 import breeze.linalg.DenseVector
 import breeze.numerics.sigmoid
-import org.apache.spark.mllib.linalg.distributed.RowMatrix
-import org.apache.spark.mllib.linalg.{Matrices, Vector, Vectors}
-import org.apache.spark.rdd.RDD
-import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.mllib.feature.StandardScaler
-import org.apache.spark.mllib.util.{LinearDataGenerator, MLUtils}
-import util.Random
+import org.apache.spark.mllib.linalg.distributed.RowMatrix
+import org.apache.spark.mllib.linalg.{Matrices, Vectors}
+import org.apache.spark.mllib.util.LinearDataGenerator
+import org.apache.spark.{SparkConf, SparkContext}
 
 object ch02_ref2 extends Serializable {
   def main(args: Array[String]): Unit = {

@@ -1,13 +1,10 @@
-package dg.spark.mllib.homework
+package dg.spark.mllib.homework.ch02
 
 import breeze.linalg._
 import breeze.numerics._
-import org.apache.spark.SparkConf
-import org.apache.spark.SparkContext
-import org.apache.spark.rdd.RDD
 import breeze.stats.distributions.Rand
-import breeze.linalg.support.CanSlice
-import breeze.linalg.support.CanSlice2
+import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.rdd.RDD
 
 object LogisticRegression extends Serializable {
 

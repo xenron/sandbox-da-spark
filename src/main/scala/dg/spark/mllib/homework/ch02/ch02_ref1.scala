@@ -1,17 +1,11 @@
-package dg.spark.mllib
+package dg.spark.mllib.homework.ch02
 
-import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.mllib.random.RandomRDDs._
-import org.apache.spark.mllib.feature.Normalizer
 import breeze.linalg._
 import breeze.numerics._
-import org.apache.spark.mllib.feature.StandardScaler
-import org.apache.spark.mllib.linalg.{Vector, Vectors}
-import org.apache.spark.mllib.regression.LabeledPoint
-import org.apache.spark.mllib.util.{LinearDataGenerator, MLUtils}
 import breeze.stats._
-import collection.mutable.ArrayBuffer
-import util.Random
+import org.apache.spark.{SparkConf, SparkContext}
+
+import scala.collection.mutable.ArrayBuffer
 
 object ch02_ref1 {
 }

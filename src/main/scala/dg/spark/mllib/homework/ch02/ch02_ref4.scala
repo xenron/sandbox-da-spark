@@ -1,14 +1,13 @@
-package dg.spark.mllib.homework
+package dg.spark.mllib.homework.ch02
 
+import breeze.linalg.{*, DenseMatrix, DenseVector}
 import breeze.numerics._
-import org.apache.spark.mllib.feature.StandardScaler
-import org.apache.spark.mllib.linalg.{Vectors, Vector}
-import org.apache.spark.mllib.regression.LabeledPoint
-import org.apache.spark.mllib.util.{MLUtils, LinearDataGenerator}
-import org.apache.spark.{SparkContext, SparkConf}
-import breeze.linalg.{*, DenseVector, DenseMatrix}
 import breeze.stats._
-import org.apache.spark.{SparkContext, SparkConf}
+import org.apache.spark.mllib.feature.StandardScaler
+import org.apache.spark.mllib.linalg.{Vector, Vectors}
+import org.apache.spark.mllib.regression.LabeledPoint
+import org.apache.spark.mllib.util.MLUtils
+import org.apache.spark.{SparkConf, SparkContext}
 
 object ch02_ref4 extends Serializable {
   def main(args: Array[String]) {

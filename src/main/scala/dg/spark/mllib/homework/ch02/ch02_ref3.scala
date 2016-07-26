@@ -1,10 +1,8 @@
-package dg.spark.mllib.homework
+package dg.spark.mllib.homework.ch02
 
-import org.apache.spark.rdd.RDD
-import org.apache.spark.{SparkConf, SparkContext}
 import breeze.linalg._
-import org.apache.log4j.Level
-import org.apache.log4j.Logger
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.{SparkConf, SparkContext}
 
 object ch02_ref3 extends Serializable {
   def main(args: Array[String]): Unit = {
