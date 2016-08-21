@@ -3,6 +3,15 @@ package dg.spark.mllib.homework.ch09
 import org.apache.spark.mllib.fpm.FPGrowth
 import org.apache.spark.{SparkConf, SparkContext}
 
+/**
+  * 数据源：
+  * 1、用户安装列表（在第1周的作业中）：
+  * 用户安装列表，数据格式：上报日期、用户ID、安装包名；
+  * 解释下：通过第三方工具，收集到每个用户手机中的安装应用包名，收集的时间间隔是每天收集一次，所以本次数据是日期、用户、包名，也就是收集用户每一天的安装列表。
+  *
+  * 大题1：
+  * 1）选取1天的数据，取Top前1000的包名，计算包名之间的关联规则（其中阈值自己设定）。
+  */
 object FPGrowth {
   def main(args: Array[String]) {
 
