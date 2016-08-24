@@ -30,3 +30,5 @@ project/project
 project/target
 
 build/
+
+.DS_Store
